@@ -28,17 +28,29 @@ public class Volunteers extends SuperEntity implements java.io.Serializable {
 	private String contactNo;
 	private String type;
 	private String gender;
+	public Disaster disaster;
 
 	public Volunteers() {
 	}
 
-	public Volunteers( Area area, String fullName, String contactNo, String type, String gender) {
+	public Volunteers( Disaster disaster,Area area, String fullName, String contactNo, String type, String gender) {
 		this.area = area;
 		this.fullName = fullName;
 		this.contactNo = contactNo;
 		this.type = type;
 		this.gender = gender;
+		this.disaster = disaster;
 	}
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "disaster")
+	public Disaster getDisaster() {
+		return this.disaster;
+	}
+
+	public void setDisaster(Disaster disaster) {
+		this.disaster = disaster;}
 
 
 	@JsonIgnore

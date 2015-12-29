@@ -28,17 +28,30 @@ public class AidNeeded extends SuperEntity implements java.io.Serializable {
 	private Integer isValid;
 	private Integer isInvalid;
 	private String contactNo;
+	private Disaster disaster;
 
 	public AidNeeded() {
 	}
 
-	public AidNeeded(String contactNo,  Area area, String aidType, Integer isValid, Integer isInvalid) {
+	public AidNeeded(Disaster disaster,String contactNo,  Area area, String aidType, Integer isValid, Integer isInvalid) {
 		this.area = area;
 		this.aidType = aidType;
 		this.isValid = isValid;
 		this.isInvalid = isInvalid;
 		this.contactNo = contactNo;
+		this.disaster = disaster;
 	}
+
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "disaster")
+	public Disaster getDisaster() {
+		return this.disaster;
+	}
+
+	public void setDisaster(Disaster disaster) {
+		this.disaster = disaster;}
 
 
 	@JsonIgnore

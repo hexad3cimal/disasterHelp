@@ -56,8 +56,12 @@ public class HelplineDaoImpl implements HelplineDao {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Helpline.class,"helpline")
                 .createAlias("helpline.disaster", "disaster", JoinType.LEFT_OUTER_JOIN);
         criteria.add(Restrictions.eq("disaster.disasterName", disaster));
+        criteria.setProjection(Projections.rowCount());
         return ((Long)criteria.setProjection(Projections.rowCount()).uniqueResult()).intValue();
 
+//        List count = criteria.list();
+//        System.out.println(" helpline list size>>>>" + count.size());
+//        return count.size();
     }
 
 

@@ -46,9 +46,11 @@ public class AreaDaoImpl implements AreaDao {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Area.class,"area")
                 .createAlias("area.disaster", "disaster", JoinType.LEFT_OUTER_JOIN);
         criteria.add(Restrictions.eq("disaster.disasterName", disaster));
-        criteria.setProjection(Projections.rowCount());
-        List count = criteria.list();
-        return count.size();
+        return ((Long)criteria.setProjection(Projections.rowCount()).uniqueResult()).intValue();
+
+//        criteria.setProjection(Projections.rowCount());
+//        List count = criteria.list();
+//        return count.size();
     }
 
     @Override

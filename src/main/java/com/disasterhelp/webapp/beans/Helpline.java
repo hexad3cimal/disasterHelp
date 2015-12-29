@@ -28,18 +28,29 @@ public class Helpline extends SuperEntity implements java.io.Serializable {
 	private String type;
 	private Integer isValid;
 	private Integer isInvalid;
+	private Disaster disaster;
 
 	public Helpline() {
 	}
 
-	public Helpline(Area area, String helplineno, String type, Integer isValid, Integer isInvalid) {
+	public Helpline(Disaster disaster,Area area, String helplineno, String type, Integer isValid, Integer isInvalid) {
 		this.area = area;
 		this.helplineno = helplineno;
 		this.type = type;
 		this.isValid = isValid;
 		this.isInvalid = isInvalid;
+		this.disaster = disaster;
 	}
 
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "disaster_id")
+	public Disaster getDisaster() {
+		return this.disaster;
+	}
+
+	public void setDisaster(Disaster disaster) {
+		this.disaster = disaster; }
 
 
 	@JsonIgnore
@@ -52,7 +63,6 @@ public class Helpline extends SuperEntity implements java.io.Serializable {
 	public void setArea(Area area) {
 		this.area = area;
 	}
-
 
 
 	@Column(name = "helplineno", length = 45)

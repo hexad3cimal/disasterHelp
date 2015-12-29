@@ -13,7 +13,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 public abstract class SuperEntity {
 
     private Integer id;
-    private Disaster disaster;
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -27,15 +26,6 @@ public abstract class SuperEntity {
         this.id = id;
     }
 
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "disaster")
-    public Disaster getDisaster() {
-        return this.disaster;
-    }
-
-    public void setDisaster(Disaster disaster) {
-        this.disaster = disaster;}
 
 
 }

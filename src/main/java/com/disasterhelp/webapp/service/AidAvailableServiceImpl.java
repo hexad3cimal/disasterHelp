@@ -12,8 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Service("AidAvailableService")
 public class AidAvailableServiceImpl implements AidAvailableService {
-    @Autowired
-    AidAvailableDao aidAvailableDao;
+@Autowired
+AidAvailableDao aidAvailableDao;
+
+
     @Override
     public void add(AidAvailable aidAvailable) throws Exception {
         aidAvailableDao.add(aidAvailable);

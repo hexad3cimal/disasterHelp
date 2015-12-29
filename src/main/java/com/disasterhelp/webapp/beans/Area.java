@@ -1,6 +1,7 @@
 package com.disasterhelp.webapp.beans;// default package
 // Generated 15 Dec, 2015 8:45:27 PM by Hibernate Tools 4.0.0
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -26,6 +27,7 @@ import javax.persistence.Table;
 public class Area extends SuperEntity implements java.io.Serializable {
 
 	private String areaName;
+	private Disaster disaster;
 	private Set<Helpline> helplines = new HashSet<Helpline>(0);
 	private Set<Volunteers> volunteerses = new HashSet<Volunteers>(0);
 	private Set<AidNeeded> aidNeededs = new HashSet<AidNeeded>(0);
@@ -34,15 +36,25 @@ public class Area extends SuperEntity implements java.io.Serializable {
 	public Area() {
 	}
 
-	public Area(String areaName, Set<Helpline> helplines, Set<Volunteers> volunteerses,
+	public Area(Disaster disaster,String areaName, Set<Helpline> helplines, Set<Volunteers> volunteerses,
 			Set<AidNeeded> aidNeededs, Set<AidAvailable> aidAvailables) {
 		this.areaName = areaName;
 		this.helplines = helplines;
 		this.volunteerses = volunteerses;
 		this.aidNeededs = aidNeededs;
 		this.aidAvailables = aidAvailables;
+		this.disaster =disaster;
 	}
 
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "disaster")
+	public Disaster getDisaster() {
+		return this.disaster;
+	}
+
+	public void setDisaster(Disaster disaster) {
+		this.disaster = disaster;}
 
 
 	@Column(name = "areaName", length = 60)

@@ -31,14 +31,15 @@ public class AidAvailableDaoImpl implements AidAvailableDao {
 
     @Override
     public Integer getDisasterCount(String disaster) throws Exception {
-        System.out.println("Reachded daooooo>>>"+disaster);
+        System.out.println("Reachded daooooo>>>" + disaster);
         Criteria criteria = sessionFactory.getCurrentSession()
-                .createCriteria(AidAvailableDao.class,"aidAvailable");
+                .createCriteria(AidAvailable.class,"aidAvailable");
         criteria.createAlias("aidAvailable.disaster", "disaster", JoinType.LEFT_OUTER_JOIN);
         criteria.add(Restrictions.eq("disaster.disasterName", disaster));
-        criteria.setProjection(Projections.rowCount());
-        List count = criteria.list();
-        System.out.println("list size>>>>"+count.size());
-       return count.size();
+       return ((Long)criteria.setProjection(Projections.rowCount()).uniqueResult()).intValue();
+//        List count = criteria.list();
+//        System.out.println("list size>>>>"+count.size());
+//       return count.size();
+
     }
 }

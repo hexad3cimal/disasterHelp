@@ -25,18 +25,29 @@ public class AidAvailable extends SuperEntity implements java.io.Serializable {
 	private Integer isValid;
 	private Integer isInvalid;
 	private String contactNo;
+	private  Disaster disaster;
 
 	public AidAvailable() {
 	}
 
-	public AidAvailable(Area area, String aidType, Integer isValid, Integer isInvalid,String contactNo) {
+	public AidAvailable(Disaster disaster, Area area, String aidType, Integer isValid, Integer isInvalid,String contactNo) {
 		this.area = area;
 		this.aidType = aidType;
 		this.isValid = isValid;
 		this.isInvalid = isInvalid;
 		this.contactNo = contactNo;
+		this.disaster = disaster;
 	}
 
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "disaster")
+	public Disaster getDisaster() {
+		return this.disaster;
+	}
+
+	public void setDisaster(Disaster disaster) {
+		this.disaster = disaster;}
 
 
 	@JsonIgnore

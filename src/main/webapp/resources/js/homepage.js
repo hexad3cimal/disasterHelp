@@ -65,7 +65,7 @@ var disasterName =$('#disasterName').val();
 var data = {
 "disasterName":$('#disasterName').val()
 
-}
+};
 
 $.ajax({
             url: contextPath+"/disaster/add",

@@ -35,9 +35,9 @@ public class AidNeededDaoImpl implements AidNeededDao {
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(AidNeeded.class,"aidNeeded")
                 .createAlias("aidNeeded.disaster","disaster", JoinType.LEFT_OUTER_JOIN);
         criteria.add(Restrictions.eq("disaster.disasterName", disaster));
-        criteria.setProjection(Projections.rowCount());
-        List count = criteria.list();
-        return count.size();
+        return ((Long)criteria.setProjection(Projections.rowCount()).uniqueResult()).intValue();
+//        List count = criteria.list();
+//        return count.size();
     }
 
     @Override

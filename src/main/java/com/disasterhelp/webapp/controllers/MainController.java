@@ -89,7 +89,7 @@ public class MainController {
 
     @RequestMapping("{disaster}/home")
     public ModelAndView helplineListView(){
-        return new ModelAndView("helpline");
+        return new ModelAndView("disasterHome");
     }
 
     @RequestMapping("{disaster}/volunteer/getlist")

@@ -206,14 +206,14 @@ catch (Exception e){
         label.paint(g);
         g.dispose();
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ByteArrayOutputStream imageByte = new ByteArrayOutputStream();
         try {
-            ImageIO.write(image, "jpg", baos);
+            ImageIO.write(image, "jpg", imageByte);
 
         }catch (Exception e){
 
         }
-        byte[] bytes = baos.toByteArray();
+        byte[] bytes = imageByte.toByteArray();
         String base64String = new sun.misc.BASE64Encoder().encode(bytes);
 
         request.getSession().setAttribute("captchaV", captcha);

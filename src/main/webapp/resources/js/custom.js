@@ -222,6 +222,8 @@ $(function () {
 
 $(document).ready(function () {
 
+    jQuery("#sidebar-menu").niceScroll({styler:"fb",cursorcolor:"#4ECDC4", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
+
     $('#stars').on('starrr:change', function (e, value) {
         $('#count').html(value);
     });

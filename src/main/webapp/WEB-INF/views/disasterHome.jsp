@@ -6,20 +6,23 @@
         <script src="${home}"></script>
 
         <%--Heading--%>
-        <div class="row row-centered">
-        <h1 id="mainH1" class="col-centered">Chennai</h1>
-        </div>
 
 
         <%--Tiles--%>
         <div class="row tile_count ">
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3 tile_stats_count">
+            <div  class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+            <h1 id="mainH1"></h1>
+            </div>
+
+            <div  class="row col-lg-12 col-md-12 col-sm-12">
+
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3 tile_stats_count">
         <div class="x_panel">
         <div class="right">
         <span class="count_top"><i class="fa fa-user"></i> Total</span>
         <div class="count green" id="volunteerNos"></div>
         <span class="count_bottom">volunteers registered</span>
-        <div class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
         <button type="button" id ="newVolunteer" class=" btn btn-success pull-left">Add new volunteer</button>
         </div>
         </div>
@@ -32,8 +35,8 @@
         <div class="right">
         <span class="count_top"><i class="fa fa-user"></i> Total</span>
         <div class="count green" id="areaCount"></div>
-        <span class="count_bottom">areas listed</span>
-        <div class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+        <div class="count_bottom">areas listed</div>
+        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
         <button type="button" id ="newArea" class=" btn btn-success pull-left responsive-width">Add new area</button>
         </div>
         </div>
@@ -46,7 +49,7 @@
         <span class="count_top"><i class="fa fa-user"></i> Total</span>
         <div class="count green" id="helplineCount"></div>
         <span class="count_bottom">helplines available</span>
-        <div class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
         <button type="button" id ="newHelpLine" class=" btn btn-success pull-left responsive-width">Add new
         helpline</button>
         </div>
@@ -59,8 +62,8 @@
         <div class="right">
         <span class="count_top"><i class="fa fa-user"></i> Total</span>
         <div class="count green" id="aidNeededNos"></div>
-        <span class="count_bottom">aid needed</span>
-        <div class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+        <div class="count_bottom">aid needed</div>
+        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
         <button type="button" id ="newAid" class=" btn btn-success pull-left responsive-width">Request aid</button>
         </div>
         </div>
@@ -72,8 +75,8 @@
         <div class="right">
         <span class="count_top"><i class="fa fa-user"></i> Total</span>
         <div class="count green" id="aidAvailableNos"></div>
-        <span class="count_bottom">aid Available</span>
-        <div class="row col-lg-12 col-md-12 col-sm-12 row-centered">
+        <div class="count_bottom">aid Available</div>
+        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
         <button type="button" id ="newAidAvailable" class=" btn btn-success pull-left responsive-width">New aid</button>
         </div>
         </div>
@@ -82,10 +85,13 @@
 
 
         </div>
+        </div>
         <!-- Tiles End -->
+
 
         <%--Search box--%>
         <div id="searchBox">
+         <div class="x_panel">
         <div class="row row-centered col-md-12 col-sm-12 col-xs-12 col-lg-12">
 
         <div class="input-group col-md-8 col-md-offset-2">
@@ -93,6 +99,7 @@
         <span class="input-group-addon">
         <i class="fa fa-search"></i>
         </span>
+        </div>
         </div>
         </div>
 

@@ -40,7 +40,7 @@
 
 
         <div class="main_container">
-            <div class="col-md-3 left_col">
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 left_col">
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
@@ -56,18 +56,20 @@
            </div>
                  </div>
 <!-- sidebar menu -->
-</div>
+		<tiles:insertAttribute name="topNavigation"></tiles:insertAttribute>
+
 
 <div class="right_col" role="main">
-<div class = "row">
+<div class = "row col-md-9 col-lg-9 col-sm-9 col-xs-9 ">
 				<tiles:insertAttribute name="body"></tiles:insertAttribute>
 
 </div>
 </div>
 </div>
-</div>
+    </div>
 
-<spring:url value="/resources/js/jquery.nicescroll.min.js" var="niceScroll" />
+
+    <spring:url value="/resources/js/jquery.nicescroll.min.js" var="niceScroll" />
 <spring:url value="/resources/datatables/jquery.dataTables.js" var="dataJs2" />
 <spring:url value="/resources/js/jquery.validate.js" var="validate" />
 

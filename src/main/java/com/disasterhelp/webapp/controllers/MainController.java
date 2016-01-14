@@ -88,8 +88,17 @@ public class MainController {
     }
 
     @RequestMapping("{disaster}/home")
-    public ModelAndView helplineListView(){
-        return new ModelAndView("disasterHome");
+    public ModelAndView helplineListView(@PathVariable (value = "") String disaster){
+        try {
+            if (!NullCheck.isEmpty(disasterService.getByName(disaster)))
+                return new ModelAndView("disasterHome");
+            else
+                return new ModelAndView("disaster404");
+
+        }catch (Exception e){
+            return new ModelAndView("disaster404");
+        }
+
     }
 
     @RequestMapping("{disaster}/volunteer/getlist")

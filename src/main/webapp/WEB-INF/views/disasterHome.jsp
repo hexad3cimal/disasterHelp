@@ -14,7 +14,7 @@
             <h1 id="mainH1"></h1>
             </div>
 
-            <div  class="row col-lg-12 col-md-12 col-sm-12">
+            <div  class="row col-lg-12 col-md-12 col-sm-12 row-centered">
 
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3 tile_stats_count">
         <div class="x_panel">
@@ -23,7 +23,7 @@
         <div class="count green" id="volunteerNos"></div>
         <span class="count_bottom">volunteers registered</span>
         <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
-        <button type="button" id ="newVolunteer" class=" btn btn-success pull-left">Add new volunteer</button>
+        <button type="button" id ="newVolunteer" class=" btn btn-success ">Add new volunteer</button>
         </div>
         </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="count green" id="areaCount"></div>
         <div class="count_bottom">areas listed</div>
         <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
-        <button type="button" id ="newArea" class=" btn btn-success pull-left responsive-width">Add new area</button>
+        <button type="button" id ="newArea" class=" btn btn-success responsive-width">Add new area</button>
         </div>
         </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="count green" id="helplineCount"></div>
         <span class="count_bottom">helplines available</span>
         <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
-        <button type="button" id ="newHelpLine" class=" btn btn-success pull-left responsive-width">Add new
+        <button type="button" id ="newHelpLine" class=" btn btn-success  responsive-width">Add new
         helpline</button>
         </div>
         </div>
@@ -64,27 +64,27 @@
         <div class="count green" id="aidNeededNos"></div>
         <div class="count_bottom">aid needed</div>
         <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
-        <button type="button" id ="newAid" class=" btn btn-success pull-left responsive-width">Request aid</button>
+        <button type="button" id ="newAid" class=" btn btn-success responsive-width">Request aid</button>
         </div>
         </div>
         </div>
         </div>
+        </div>
+                <div  class="row col-lg-12 col-md-12 col-sm-12 row-centered">
 
-        <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4 col-md-offset-4 tile_stats_count">
-        <div class="x_panel">
-        <div class="right">
-        <span class="count_top"><i class="fa fa-user"></i> Total</span>
-        <div class="count green" id="aidAvailableNos"></div>
-        <div class="count_bottom">aid Available</div>
-        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
-        <button type="button" id ="newAidAvailable" class=" btn btn-success pull-left responsive-width">New aid</button>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-        </div>
+                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4 col-md-offset-4 tile_stats_count">
+                        <div class="x_panel">
+                                <div class="right">
+                                        <span class="count_top"><i class="fa fa-user"></i> Total</span>
+                                        <div class="count green" id="aidAvailableNos"></div>
+                                        <div class="count_bottom">aid Available</div>
+                                        <div class="row col-lg-8 col-md-8 col-sm-8 col-md-offset-2 row-centered">
+                                                <button type="button" id ="newAidAvailable" class=" btn btn-success responsive-width">New aid</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                </div>
         </div>
         <!-- Tiles End -->
 
@@ -113,7 +113,7 @@
         <h2>Volunteers available</h2>
         <div class="clearfix"></div>
         <div class="x_content">
-        <table id="volunteerTable" class="table table-striped responsive-utilities jambo_table" cellspacing="0"
+        <table id="volunteerTable" class="table table-striped " cellspacing="0"
         width="100%">
         <thead>
         <tr>
@@ -143,7 +143,7 @@
         <h2>Helplines available</h2>
         <div class="clearfix"></div>
         <div class="x_content">
-        <table id="helplineTable" class="table table-striped responsive-utilities jambo_table" cellspacing="0"
+        <table id="helplineTable" class="table table-striped " cellspacing="0"
         width="100%">
         <thead>
         <tr>
@@ -171,7 +171,7 @@
         <h2>Aid Needed</h2>
         <div class="clearfix"></div>
         <div class="x_content">
-        <table id="aidNeededTable" class="table table-striped responsive-utilities jambo_table" cellspacing="0"
+        <table id="aidNeededTable" class="table table-striped " cellspacing="0"
         width="100%">
         <thead>
         <tr>
@@ -198,7 +198,7 @@
         <h2>Aid available</h2>
         <div class="clearfix"></div>
         <div class="x_content">
-        <table id="aidAvailableTable" class="table table-striped responsive-utilities jambo_table" cellspacing="0"
+        <table id="aidAvailableTable" class="table table-striped " cellspacing="0"
         width="100%">
         <thead>
         <tr>

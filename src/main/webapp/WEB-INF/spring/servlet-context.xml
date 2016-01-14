@@ -27,7 +27,7 @@
     </bean>
 
     <mvc:resources mapping="/resources/**" location="/resources/"
-                   cache-period="31556926"/>
+                   />
 
     <bean id="sessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

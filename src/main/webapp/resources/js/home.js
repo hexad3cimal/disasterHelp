@@ -4,7 +4,9 @@ $(document).ready(function () {
 
     $('#areaSearch').on('change', function () {
         helplineTable.ajax.reload();
-        table.ajax.reload();
+        aidAvailableTable.ajax.reload();
+        aidNeededTable.ajax.reload();
+        volunteerTable.ajax.reload();
         $("#DataTable").show("slow");
 
     });
@@ -86,7 +88,7 @@ $(document).ready(function () {
     document.getElementById("mainH1").innerHTML = disaster;
 
 
-    var table = $('#volunteerTable').DataTable({
+    var volunteerTable = $('#volunteerTable').DataTable({
         dom: "rfltip",
         ajax: {
 
